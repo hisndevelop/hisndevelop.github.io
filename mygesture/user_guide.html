@@ -6,17 +6,29 @@
 <h1 style="background-color:#009385; padding-top:300px;padding-left:30px;padding-right:30px;padding-bottom:30px; color:#ffffff ">MyGesture帮助文档</h1>
 <div style="padding:20px;font-size:15px;">
 <h3></h3>
-<p style="color:#ff0000">遇到问题可先更新到最新版试试，通过应用内“评价留言、应用更新”按钮下载最新版。</p>
-<p style="color:#ff0000">*下方的FAQ整理了常见使用问题，注意查看*</p>
-<p style="color:#ff0000">为了统一反馈入口，使用交流、功能建议、Bug反馈等请扫码添加以下微信(保存二维码后，在微信扫一扫界面选择从相册扫描)</p>
+<p>为了统一收集用户反馈，避免一而再再而三的回答用户提问的重复问题，提高回复效率。</p>
+<p>特开一个微信公众号，用于自动回复常见问题，未自动回复的问题也会自动记录并尽量抽空解答。(其他地方的反馈不再重复解答)</p>
+<p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
 <p><img src="wcode.jpg"></p>
 <!--
 <p style="color:#009385">最新版MyGesute下载：<a href="mg_gesture_latest.apk">普通版</a>(使用激活码激活高级功能)  /  <a href="mg_gesture_latest_play.apk">Play版</a>(通过play账户应用内购买激活高级功能)</p>
 HideNavBarTool.apk
 -->
 
+<p style="margin-top:100px"> </p>
+<h2 style="color:#009385">导航</h2>
+<ol>
+<li><h3 style="color:#009385"><a href="#features">功能使用说明</a></h3></li>
+<li><h3 style="color:#009385"><a href="#hide_nav_bar">解决和系统自带全面屏手势冲突，无root隐藏导航栏</a></h3></li>
+<li><h3 style="color:#009385"><a href="#keep_running">保持手势在后台运行</a></h3></li>
+<li><h3 style="color:#009385"><a href="#faq">常见问题</a></h3></li>
 
-<h2 style="color:#009385">一、部分功能使用说明：</h2>
+</ol>
+
+
+<p style="margin-top:200px"> </p>
+<a name="features"></a>
+<h2 style="color:#009385">一、功能使用说明：</h2>
 <ul>
 <p style="color:#ff0000">有些功能可能不方便描述，自己开启和关闭体会看看</p>
 <li><b>【扩展面板(Pro)】：</b><br>在MyGesture的自定义手势里，选择一个手势打开‘扩展面板(Pro)’，然后在任意界面，可以通过该手势呼出扩展面板，在面板里，你可以打开你所设置的常用应用，亦可调节音量、调节亮度、快速进行网页搜索等。效果如下：</li>
@@ -33,6 +45,10 @@ HideNavBarTool.apk
 <li><b>【兼容home键】：</b><br>若返回主页手势正常工作，不要开启此项！！！此项是为了兼容部分机型返回桌面手势无效</li>
 <li><b>【长按并滑动手势】：</b><br>通过调整“长按并滑动超时时间”来调整此手势触发的灵敏度，*时间太短容易和默认滑动手势冲突，建议300ms</li>
 </ul>
+
+
+<p style="margin-top:100px"> </p>
+<a name="hide_nav_bar"></a>
 <h2 style="color:#009385">二、解决和系统自带全面屏手势冲突，无root隐藏导航栏：</h2>
 <p>	</p>
 <ul>
@@ -40,12 +56,15 @@ HideNavBarTool.apk
 <p style="color:#ffffff;	background:black">adb shell wm overscan 0,0,0,-150<p>
 <p>命令最后一个参数“-150”，为导航栏高度，需要根据你的机型分辨率微调。以上命令可多次使用，调整到合适为止。要恢复导航栏只需把最后一个参数“-150”改成“0”，再运行一遍命令即可<p>
 
-<li>也可以使用这个小工具隐藏导航栏，方便随时开关导航栏，同时可以配合MyGesutre可实现锁屏时显示导航栏，以解决屏下指纹错位、锁屏界面图标下移等问题（安装授权小工具且开启应用内“锁屏界面禁用手势”选项后生效）。下载：扫上方二维码添加微信，发送【导航栏隐藏工具】获取</a></li>
+<p style="color:#ff0000">我也开发了一个小工具用于隐藏导航栏(无需root)，方便随时开关导航栏，同时可以配合MyGesutre可实现锁屏时显示导航栏，以解决屏下指纹错位、锁屏界面图标下移等问题（安装授权小工具且开启应用内“锁屏界面禁用手势”选项后生效）。下载：扫上方二维码添加微信后，发送[导航栏隐藏工具]获取。</p>
 
 </ul>
-<h2 style="color:#009385">三、保持后台运行：</h2>
+
+<p style="margin-top:100px"> </p>
+<a name="keep_running"></a>
+<h2 style="color:#009385">三、保持手势在后台运行：</h2>
 <p>	</p>
-<ul>
+<ol>
 <p style="color:#ff0000">为了手势正常运行，必须保证MyGesture在后台不被关闭</p>
 <p><b>一般保持后台方法：</b></p>
 <li>在最近任务页面锁定</li>
@@ -54,12 +73,13 @@ HideNavBarTool.apk
 <li>在各种清理后台的应用中，将MyGesture加入到“不清理名单”</li>
 <li>在各种安全中心，手机管家里，优化应用耗电的选项里将MyGesture设置为允许</li>
 <li>Vivo手机需到i管家的后台高耗电将MyGesture设置为“允许”</li>
-</ul>
+</ol>
 
-
+<p style="margin-top:100px"> </p>
+<a name="faq"></a>
 <h2 style="color:#009385">四、FAQ：</h2>
 <p>	</p>
-<ul>
+<ol>
 <p>整理一些大家常问到的问题，经常更新</p>
 <li>Q:<b>边缘滑动不容易触发？</b><p>A:虽然手势定义为向右或向上等滑动，但实际操作中并不局限于水平或者竖直方向滑动，你可以尝试斜滑，只要x轴方向的距离大于y轴方向的距离即判定为横向滑动，反之亦然。</p></li>
 <li>Q:<b>边缘滑动手势经常无反应？</b><p>A:极有可能是触发了长按并滑动手势，但您又未设置其触发功能。建议：长按时间设置的大于300。</p></li>
@@ -77,9 +97,9 @@ HideNavBarTool.apk
 <li>Q:<b>返回上一个应用或切换应用一直提示“无上一个应用”</b><p>A:重新关开一下MyGesture的无障碍服务，然后多开几个应用后再试试</p></li>
 <li>Q:<b>打开扩展面板会自动切换静音勿扰，或自动跳动添加应用界面</b><p>A:检查是否使用了xposed的AD快消插件，把MyGesture加入到AD快消插件的白名单</p></li>
 <li>Q:<b>Android10无法读取机器码？</b><p>A:升级最新版手势并授权手势所需的两个基本权限，点击读取按钮后，按顶上显示的提示条操作读取。</p></li>
-</ul>
+</ol>
 
-
+<p style="margin-top:100px"> </p>
 <p align="center">- End -</p>
 </div>
 </body>
