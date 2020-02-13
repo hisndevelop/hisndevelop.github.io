@@ -25,7 +25,8 @@
 			param = param+">";
 			var tt = new Number(t);
 			var d = new Date().getTime();
-			if((d - tt) < 1000*60*1){
+			var dd = d-tt;
+			if(dd>0 && dd < 1000*60){
 				param = "获取花式锁屏激活码<"+param;
 			
 				setTip("showParam",param);
