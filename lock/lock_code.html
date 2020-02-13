@@ -1,62 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-    <title>花式锁屏激活</title>
-</head>
-<body>
-<div style="width=100%;padding-left:1%;padding-top:1%;padding-right:1%;padding-bottom:1%;font-size:1.1em;">
-<h3></h3>
-<a name="vx_code"></a>
 
-<h1 style="color:#176AA6;">花式锁屏激活</h1>
-<h3 style="color:#176AA6;">暂时免费获取激活码</h3>
-<p id="tip">复制以下黑框里的内容，发送到微信获取激活码</p>
-<table id="showParam" style="color:#ffffff;	background:black"></table>
-<p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
-<p><img style="width:30%" src="wcode.png"></p>
 
 
     <script type="text/javascript">
 
-        window.onload = function () {
-		var param = getQueryString("sn");
-		var t = getQueryString("t");
-		
-		if(param!=null && t!=null){
-			param = param+">";
-			var tt = new Number(t);
-			var d = new Date().getTime();
-			var dd = d+1000*60*60*13 - tt;
-			alert(d);
-			if(dd>0 && dd < 1000*60){
-				param = "获取花式锁屏激活码<"+param;
-				
-				setTip("showParam",param);
-				
-			}else{
-				setTip("tip",null);
-			}
-		
-		}else{
-			setTip("tip",null);
-		}
-		
-	}
-	
-	function setTip(id, tip) {
-    		document.getElementById(id).innerText = tip;
- 	}
-
-	function getQueryString(name) {
-    		let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-    		let r = window.location.search.substr(1).match(reg);
-    		if (r != null) {
-        		return unescape(r[2]);
-    		};
-    		return null;
- 	}
+        window.location.replace("https://www.baidu.com");
     </script>
-</body>
+
 </html>
