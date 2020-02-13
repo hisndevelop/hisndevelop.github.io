@@ -12,7 +12,7 @@
 
 <h1 style="color:#176AA6;">花式锁屏激活</h1>
 <h3 style="color:#176AA6;">暂时免费获取激活码</h3>
-<p>复制以下黑框里的内容，发送到微信获取激活码</p>
+<p id="tip">复制以下黑框里的内容，发送到微信获取激活码</p>
 <table id="showParam" style="color:#ffffff;	background:black"></table>
 <p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
 <p><img style="width:30%" src="wcode.png"></p>
@@ -28,19 +28,24 @@
 			param = param+">";
 			var tt = new Number(t);
 			var d = new Date().getTime();
-			if((d-tt) < 1000*60){
-				document.getElementById("showParam").innerText = "获取花式锁屏激活码<"+param;
-			}else{
-				alert("链接过期，请从应用内打开此页面");
-				window.location.href = "about:blank";
+			if((d-tt) > 1000*600){
+				param = "获取花式锁屏激活码<"+param;
 				
+				setTip("showParam",param);
+				
+			}else{
+				setTip("tip",null);
 			}
-			
-
+		
 		}else{
-			window.location.href = "about:blank";
+			setTip("tip",null);
 		}
+		
 	}
+	
+	function setTip(id, tip) {
+    		document.getElementById(id).innerText = tip;
+ 	}
 
 	function getQueryString(name) {
     		let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
