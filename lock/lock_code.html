@@ -6,23 +6,41 @@
     <title>花式锁屏激活</title>
 </head>
 <body>
-<div style="padding-left:1%;padding-top:1%;padding-right:1%;padding-bottom:1%;font-size:1.1em;width=100%;">
+<div style="width=100%;padding-left:1%;padding-top:1%;padding-right:1%;padding-bottom:1%;font-size:1.1em;">
 <h3></h3>
 <a name="vx_code"></a>
 
-<h2 style="color:#176AA6;">暂时免费获取花式锁屏激活码</h2>
+<h1 style="color:#176AA6;">花式锁屏激活</h1>
+<h3 style="color:#176AA6;">暂时免费获取激活码</h3>
 <p>复制以下黑框里的内容，发送到微信获取激活码</p>
-<a id="showParam" style="color:#ffffff;	background:black"></a>
+<table id="showParam" style="color:#ffffff;	background:black"></table>
 <p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
-<p><img style="width:20%" src="wcode.png"></p>
+<p><img style="width:30%" src="wcode.png"></p>
 
 
     <script type="text/javascript">
 
         window.onload = function () {
-		var param = getQueryString("sn")+">";
-		document.getElementById("showParam").innerText = "获取花式锁屏激活码<"+param;
-        }
+		var param = getQueryString("sn");
+		var t = getQueryString("t");
+		
+		if(param!=null && t!=null){
+			param = param+">";
+			var tt = new Number(t);
+			var d = new Date().getTime();
+			if((d-tt) < 1000*60){
+				document.getElementById("showParam").innerText = "获取花式锁屏激活码<"+param;
+			}else{
+				alert("链接过期，请从应用内打开此页面");
+				window.location.href = "about:blank";
+				
+			}
+			
+
+		}else{
+			window.location.href = "about:blank";
+		}
+	}
 
 	function getQueryString(name) {
     		let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
