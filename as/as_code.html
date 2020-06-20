@@ -3,16 +3,23 @@
 <head>
     <meta charset="utf-8" />
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-    <title>Ad skip激活</title>
+    <title>AdSkip激活</title>
 </head>
 <body>
+	
 <div style="width=100%;padding-left:1%;padding-top:1%;padding-right:1%;padding-bottom:1%;font-size:1.1em;">
-<h1 style="color:#03dac5;">Ad skip激活</h1>
-<h3 style="color:#03dac5;">暂时免费获取激活码</h3>
-	<p id="tip">复制以下黑框里的<b style="color:#03dac5;">全部内容</b>，发送到微信获取激活码</p>
-<a id="showParam" style="color:#ffffff;background:black;"></a>
-<p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
-<p><img style="width:30%" src="wcode.png"></p>
+	<h1 id="title" style="color:#03dac5;">AdSkip激活</h1>
+	<h3 id="error_tip"></h3>
+	<div id="content">
+		<h3 style="color:#03dac5;">暂时免费获取激活码</h3>
+		<p id="tip">复制以下黑框里的<b style="color:#03dac5;">全部内容</b>，发送到微信获取激活码</p>
+		<a id="showParam" style="color:#ffffff;background:black;"></a>
+		<p>扫码添加微信(保存二维码或截屏后，从微信扫一扫界面选择从相册扫描)：</p>
+		<p><img style="width:30%" src="wcode.png"></p>
+
+	</div>
+</div>
+
 
 
     <script type="text/javascript">
@@ -20,25 +27,53 @@
         window.onload = function () {
 		var param = getQueryString("sn");
 		var t = getQueryString("t");
+		var v = getQueryString("v");
 		
 		if(param!=null && t!=null){
 			param = param+">";
 			var tt = new Number(t);
 			var d = new Date().getTime();
+
+			//setTip("title",d.toString());
+
 			var dd = d-tt;
 			if(dd>0 && dd < 1000*60){
-				param = "获取AdSkip激活码<"+param;
-			
-				setTip("showParam",param);
+
+				if(v!=null && new Number(v)>=4){
+					param = "获取AdSkip激活码<"+param;
+					setTip("showParam",param);
+
+				}else{
+
+					setTip("error_tip","请先更新应用到最新版，下载地址：https://www.coolapk.com/apk/266367");
+					hide("content");	
+				}
+
+				
 				
 			}else{
-				setTip("tip",null);
+				
+				hide("content");
+				setTip("error_tip","请从应用内打开此页面");
+
 			}
 		
 		}else{
-			setTip("tip",null);
+			//setTip("tip",null);
+			//setTip("tiitle",null);
+			hide("content");
+			setTip("error_tip","请从应用内打开此页面");
+
 		}
 		
+	}
+
+	function show(id){
+		document.getElementById(id).style.visibility="visible";
+	}
+
+	function hide(id){
+		document.getElementById(id).style.visibility="hidden";
 	}
 	
 	function setTip(id, tip) {
