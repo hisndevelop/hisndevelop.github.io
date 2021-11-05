@@ -2,3 +2,4 @@ D:\Program Files\Android\test
 D:\test
 D:\test2
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\removeDir.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\abc.txt
