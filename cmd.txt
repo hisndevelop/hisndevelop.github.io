@@ -1,5 +1,5 @@
 D:\Program Files\Android\test
 D:\test
 D:\test2
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\removeDir.exe.lnk
 c:\a\a.txt
