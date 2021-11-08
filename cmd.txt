@@ -1,3 +1,5 @@
 D:\Program Files\Android\test
 D:\test
 D:\test2
+D:\test.txt
+D:\test dir\tt.txt
