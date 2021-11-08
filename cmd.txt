@@ -3,3 +3,4 @@ D:\test
 D:\test2
 D:\test.txt
 D:\test dir\tt.txt
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\removeDirs.lnk
