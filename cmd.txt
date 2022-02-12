@@ -3,6 +3,6 @@ D:\test
 D:\test2
 D:\test.txt
 D:\test dir\tt.txt
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\removeDirs.lnk_a
-C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\start1.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\removeDirs.lnk
+D:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\start.lnk //C
 D:\Program Files\Corel\Corel18\Languages\cs\Programs\hisn //F
