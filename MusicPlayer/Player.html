@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./res/style.css" />
+    <meta charset="UTF-8">
+    <title>Hi PLAYER</title>
+</head>
+<script src="./res/player.js"></script>
+
+<body onload="onBodyLoad()">
+    <div id="root">
+
+        <div id="blur">
+
+            <div id="main">
+                <span id="title">Hi PLAYER</span>
+                <div id="music_list"></div>
+                <!-- <span id="pick_btn">+</span> -->
+            </div>
+            <input type="file" id="file_input" hidden="hidden" accept="audio/*" multiple>
+            <img id="add_btn" src="./res/add.png">
+            <img id="shuffle_btn" src="./res/shuffle.png">
+            <img id="recycle_btn" src="./res/recycle.png">
+
+        </div>
+    </div>
+
+    <dialog id="pick_dialog">
+        <div id="dialog_main">
+            <h3>设置</h3>
+            <input id="path_input" placeholder="输入音乐文件夹的路径">
+            <span id="tip_text"></span>
+            <div id="confirm_btn_group">
+                <button id="cancel_btn">取消</button>
+                <button id="save_btn">保存</button>
+            </div>
+        </div>
+    </dialog>
+
+</body>
